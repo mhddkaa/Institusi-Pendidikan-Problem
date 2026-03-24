@@ -1,4 +1,4 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
+# Menyelesaikan Permasalahan Institusi Pendidikan
 
 ## Business Understanding
 Jaya Jaya Institut adalah salah satu institusi pendidikan tinggi yang telah berdiri sejak tahun 2000 dan memiliki reputasi yang baik dalam menghasilkan lulusan berkualitas. Namun, institusi menghadapi tantangan serius berupa tingginya angka siswa yang tidak menyelesaikan pendidikan (*dropout*). 
