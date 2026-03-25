@@ -136,13 +136,14 @@ Beberapa point penting yang dapat ditarik menjadi kesimpulan:
 4. **Faktor paling berpengaruh adalah kombinasi performa akademik dan kondisi finansial**
    Variabel seperti jumlah mata kuliah lulus, nilai semester, serta status pembayaran menjadi indikator utama dalam menentukan apakah siswa akan dropout atau graduate.
 5. **Model Machine Learning yang dibangun mampu memprediksi status siswa dengan baik**
-   Model yang dibangun best model adalah Random Forest, menunjukkan performa yang cukup akurat, sehingga dapat digunakan sebagai alat untuk memprediksi siswa yang berisiko dropout. Dengan hasil evaluasi model sebagai berikut:
+   Model yang dibangun best model adalah Random Forest, menunjukkan performa yang cukup akurat, sehingga dapat digunakan sebagai alat untuk memprediksi siswa yang berisiko dropout. Berikut hasil evaluasi model sebagai berikut:
    - Accuracy: 91%
-   - Precission: 92%
-   - Recall: 90%
-   - F1-Score: 90%
+   - Precission (Macro Avg): 92%
+   - Recall (Macro Avg): 90%
+   - Recall (Dropout): 82%
+   - F1-Score (Macro Avg): 90%
 
-    Model ini memiliki akurasi sebesar 91%, sehingga dapat dikatakan **cukup andal** dalam memprediksi status siswa (dropout & graduate). Model juga memiliki nilai recall berdasarkan macro avg yang tinggi (90%) menunjukkan bahwa model mampu mengidentifikasi sebagian besar siswa yang benar-benar berisiko dropout atau graduate. Tentu hal ini penting dalam konteks bisnis, karena memungkinkan institusi untuk melakukan prediksi lebih awal dan mencegah siswa dropout dari institusi pendidikan. Namun, model masih dapat ditingkatkan lebih lanjut khususnya meningkatkan recall pada kelas dropout, untuk meminimalkan jumlah siswa berisiko yang tidak terdeteksi (false negatif).
+    Dengan tingkat akurasi sebesar 91%, sehingga model dapat dikatakan **cukup andal** dalam memprediksi status siswa (dropout & graduate). Nilai recall macro yang tinggi (90%) menunjukkan bahwa model secara umum mampu mengidentifikasi sebagian besar siswa pada kedua kelas dengan baik. Namun, jika dilihat lebih spesifik pada kelas dropout, model memiliki recall sebesar 82%, yang berarti masih terdapat sekitar **18% siswa berisiko yang tidak terdeteksi (false negative)**. Tentu dalam konteks bisnis ini menjadi hal yang perlu diperhatikan, karena kegagalan dalam mendeteksi siswa berisiko dapat menyebabkan keterlambatan intervensi dari pihak institusi. Meskipun model sudah cukup baik, model masih dapat ditingkatkan lebih lanjut khususnya meningkatkan recall pada kelas dropout, agar sistem dapat lebih optimal.
    
 ### Rekomendasi Action Items
 Berdasarkan kesimpulan diatas, berikut adalah beberapa rekomendasi item yang dapat diterapkan oleh Jaya Jaya institusi untuk menurunkan tingkat dropout dan meningkatkan keberhasilan akademik siswa:
