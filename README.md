@@ -43,7 +43,31 @@ Setup environment:
    ```
 
 ## Business Dashboard
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Student Dropout Problem Dashboard, dirancang untuk menyediakan insight bagi para pihak institusi mengenai tingkat siswa dropout yang mencapai lebih dari 30%. Dashboard ini terdiri dari pie chart tentang summary data siswa, kemudian barchat faktor-faktor dropout mahasiswa.
+
+<img width="1285" height="1332" alt="Putu-Mahdalika-Intan-Pratiwi-dashboard" src="https://github.com/user-attachments/assets/82771956-93fe-49d4-977f-b3956785f47b" />
+
+> **Average of Age** adalah 23.27 tahun, **Average of Admission Grade** adalah 126.98. Menunjukkan mayoritas siswa berada pada usia awal-20an saat masuk dengan nilai akademik yang cukup baik.
+
+> Dari **pie chart status**, terdapat total 4424 siswa, dimana sebanyak 794 (17.95%) yang saat ini sedang terdaftar (enrolled), 2209 (49.93%) yang sudah lulus (graduate), dan 1421 (32.12%) yang *dropout*. Hal ini menunjukkan bahwa tingkat *dropout* masih tergolong tinggi, hampir 1/3 dari total siswa.
+
+> Dari **pie chart debitur** sebanyak 11.37% adalah seorang debitur, dan 88.63% sisanya tidak.
+
+> Dari **pie chart gender**, dapat diketahui bahwa didominasi oleh jenis kelamin perempuan, sebesar 2868 (64.83%), sedangkan laki-laki sebanyak 1556 (35.17%).
+   
+> Dari **pie chart beasiswa**, sebesar  1099 (24.84%) siswa yang memperoleh beasiswa, sedangkan 3325 (75.16%) sisanya tidak.  
+
+> Dari **bar chart status siswa berdasarkan status debtor**, terlihat bahwa siswa yang menjadi debitur paling banyak berada pada status dropout (312 siswa) dibandingkan yang lulus (101 siswa). Hal ini menunjukkan bahwa faktor finansial memiliki pengaruh kuat terhadap kemungkinan mahasiswa mengalami dropout.
+
+> Dari **bar chart status siswa berdasarkan beasiswa**, terdapat 835 siswa lulus dengan beasiswa dan 1,374 lulus tanpa beasiswa (37.79% vs 62.20%). Sementara itu, siswa yang dropout dengan beasiswa hanya 134, dibandingkan 1,287 tanpa beasiswa (9.43% vs 90.57%). Ini menunjukkan bahwa beasiswa berperan signifikan dalam menurunkan risiko dropout.
+
+> Dari **bar chart performa semester 1 & 2**, siswa yang lulus memiliki nilai yang lebih tinggi dan cenderung meningkat di semester 2, sedangkan siswa dropout memiliki nilai lebih rendah sejak semester awal. Hal ini menunjukkan bahwa performa akademik di awal studi menjadi indikator penting terhadap keberhasilan kelulusan.
+
+> Dari **bar chart top courses** dengan dropout tertinggi, jurusan seperti Management, Nursing, dan Journalism and Communication memiliki jumlah dropout paling tinggi dibandingkan jurusan lainnya.
+
+> Dari **histogram usia siswa**, terlihat bahwa mayoritas siswa berada pada rentang usia 18–25 tahun, dengan jumlah semakin menurun pada usia yang lebih tinggi. Ini menunjukkan bahwa populasi siswa didominasi oleh usia muda dan relatif homogen.
+
+> Dari **chart status berdasarkan marital status**, mayoritas siswa berstatus single, baik yang lulus, dropout, maupun masih terdaftar. Status menikah dan lainnya memiliki jumlah yang jauh lebih kecil, sehingga tidak terlalu dominan dalam memengaruhi distribusi status siswa.
 
 1. Mengakses Dashboard Analisis Metabase
    ```bahs
