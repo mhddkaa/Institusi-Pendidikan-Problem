@@ -83,14 +83,29 @@ Untuk membantu Jaya Jaya institusi dalam memprediksi kemungkinan siswanya dropou
 streamlit run app.py
 ```
 
-Dan untuk menghentikan program aplikasi Streamlit dapat melalui `ctrl + c`.
+Dan untuk menghentikan program Streamlit dapat melalui `ctrl + c`.
 
-Sistem prediksi student dropout ini juga dapat diakses secara langsung yang sudah di-deploy ke Streamlit Cloud melalui tautan [berikut ini](https://institusi-pendidikan-problem.streamlit.app/)
+Sistem prediksi student dropout ini juga dapat diakses secara langsung yang sudah di-deploy melalui tautan [berikut ini](https://institusi-pendidikan-problem.streamlit.app/)
 
 ## Conclusion
-Jelaskan konklusi dari proyek yang dikerjakan.
+Beberapa point penting yang dapat ditarik menjadi kesimpulan:
 
+1. **Performa akademik menjadi faktor paling dominan dalam menentukan dropout**
+   Siswa dengan nilai rendah, terutama pada semester awal, memiliki kemungkinan dropout yang jauh lebih tinggi dibandingkan siswa dengan performa akademik baik.
+2. **Faktor finansial memiliki pengaruh signifikan terhadap dropout**
+   Siswa yang memiliki masalah keuangan (seperti status debtor atau pembayaran tidak lancar) cenderung lebih berisiko dropout, sedangkan penerima beasiswa memiliki tingkat kelulusan lebih tinggi.
+3. **Faktor demografi memiliki pengaruh, namun tidak sekuat faktor akademik dan finansial**
+   Variabel seperti gender, usia, menunjukkan pengaruh tetapi masih relatif kecil dibandingkan performa akademik.
+4. **Faktor paling berpengaruh adalah kombinasi performa akademik dan kondisi finansial**
+   Variabel seperti jumlah mata kuliah lulus, nilai semester, serta status pembayaran menjadi indikator utama dalam menentukan apakah siswa akan dropout atau graduate.
+5. **Model Machine Learning yang dibangun mampu memprediksi status siswa dengan baik**
+   Model yang dibangun best model adalah Random Forest, menunjukkan performa yang cukup akurat, sehingga dapat digunakan sebagai alat untuk memprediksi siswa yang berisiko dropout.
+   
 ### Rekomendasi Action Items
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-- action item 1
-- action item 2
+Berdasarkan kesimpulan diatas, berikut adalah beberapa rekomendasi item yang dapat diterapkan oleh Jaya Jaya institusi untuk menurunkan tingkat dropout dan meningkatkan keberhasilan akademik siswa:
+- **Early Warning System berbasis Machine Learning**
+  Implementasi sistem untuk memprediksi siswa berisiko dropout sejak semester awal, sehingga intervensi dapat dilakukan lebih cepat dan tepat sasaran.
+- **Peningkatan Dukungan Akademik di Semester Awal**
+  Difokuskan kepada siswa yang memiliki nilai rendah, dengan memberikan program mentoring, dan kelas tambahan, karena performa semester awal terbukti menjadi indikator utama dropout.
+- **Bantuan Finansial yang Lebih Fleksibel**
+  Sediakan program beasiswa tambahan dan skema pembayaran fleksibel bagi siswa yang mengalami kesulitan keuangan untuk mengurangi risiko dropout akibat faktor finansial.
