@@ -45,6 +45,13 @@ Setup environment:
 ## Business Dashboard
 Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
 
+1. Mengakses Dashboard Analisis Metabase
+   ```bahs
+   Login Metabase
+       Username: mahdaalikap@gmail.com
+       Password: root123 
+   ```
+
 ## Menjalankan Sistem Machine Learning
 Untuk membantu Jaya Jaya institusi dalam memprediksi kemungkinan siswanya dropout dan mencegah hal tersebut lebih dini, dapat menggunakan sistem aplikasi prediksi yang telah dibangun ini. Sistem ini menggunakan Streamlit dan untuk menjalankannya dapat secara local, dengan run code berikut pada Terminal,
 
