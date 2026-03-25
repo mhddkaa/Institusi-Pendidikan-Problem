@@ -141,7 +141,8 @@ Beberapa point penting yang dapat ditarik menjadi kesimpulan:
    - Precission: 92%
    - Recall: 90%
    - F1-Score: 90%
-   Model ini memiliki akurasi sebesar 91%, sehingga dapat dikatakan **cukup andal** dalam memprediksi status siswa (dropout & graduate). Model juga memiliki nilai recall berdasarkan macro avg yang tinggi (90%) menunjukkan bahwa model mampu mengidentifikasi sebagian besar siswa yang benar-benar berisiko dropout atau graduate. Tentu hal ini penting dalam konteks bisnis, karena memungkinkan institusi untuk melakukan prediksi lebih awal dan mencegah siswa dropout dari institusi pendidikan. Namun, model masih dapat ditingkatkan lebih lanjut khususnya meningkatkan recall pada kelas dropout, untuk meminimalkan jumlah siswa berisiko yang tidak terdeteksi (false negatif).
+
+    Model ini memiliki akurasi sebesar 91%, sehingga dapat dikatakan **cukup andal** dalam memprediksi status siswa (dropout & graduate). Model juga memiliki nilai recall berdasarkan macro avg yang tinggi (90%) menunjukkan bahwa model mampu mengidentifikasi sebagian besar siswa yang benar-benar berisiko dropout atau graduate. Tentu hal ini penting dalam konteks bisnis, karena memungkinkan institusi untuk melakukan prediksi lebih awal dan mencegah siswa dropout dari institusi pendidikan. Namun, model masih dapat ditingkatkan lebih lanjut khususnya meningkatkan recall pada kelas dropout, untuk meminimalkan jumlah siswa berisiko yang tidak terdeteksi (false negatif).
    
 ### Rekomendasi Action Items
 Berdasarkan kesimpulan diatas, berikut adalah beberapa rekomendasi item yang dapat diterapkan oleh Jaya Jaya institusi untuk menurunkan tingkat dropout dan meningkatkan keberhasilan akademik siswa:
