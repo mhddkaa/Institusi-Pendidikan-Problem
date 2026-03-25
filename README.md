@@ -42,6 +42,43 @@ Setup environment:
    pip install -r requirements.txt
    ```
 
+### Modeling
+Beberapa model machine learning yang digunakan dalam proyek ini untuk memprediksi status siswa (Dropout & Graduate) sebagai berikut:
+- **Logistic Regression**: digunakan sebagai base line model untuk melihat hubungan linear antara variabel terhadap kemungkinan dropout.
+- **SVM**: digunakan untuk memaksimalkan margin antara kelas dalam dataset yang berdimensi tinggi.
+- **Decision Tree Classifier**: digunakan untuk menangkap hubungan non-linear antar variabel.
+- **Random Forest Classifier**: untuk meningkatkan akurasi dan mengurangi overfitting dengan metode ensemble.
+  
+Berdasarkan hasil evaluasi, model Random Forest memberikan performa yang paling baik diantara keempat model lainnya. Model ini yang akan digunakan untuk memprediksi kedepannya.
+
+### Evaluation
+Matrix evaluation yang digunakan dalam proyek ini sebagai berikut:
+- **Accuracy**: mengukur tingkat ketepatan prediksi model secara keseluruhan.
+- **Precision & Recall**: mengukur seberapa banyak memprediksi positif yang benar dan positif yang salah.
+- **F1-Score**: keseimbangan antara presisi dan recall.
+- **Confusion Matrix**: untuk melihat distribusi prediksi benar dan salah.
+
+Berikut hasil evaluasi yang didapat pada model machine learning
+| Model               | Accuracy  | Precision | Recall    | F1-Score  |
+| ------------------- | --------- | --------- | --------- | --------- |
+| Logistic Regression | 0.913     | 0.918     | 0.941     | 0.929     |
+| SVM                 | 0.905     | 0.899     | 0.950     | 0.924     |
+| Decision Tree       | 0.854     | 0.878     | 0.882     | 0.880     |
+| **Random Forest**   | **0.910** | **0.888** | **0.975** | **0.929** |
+
+Berikut classification report untuk model Random Forest (Hyperparameter Tuning)
+
+```bash
+                 precision    recall  f1-score   support
+   
+              0       0.94      0.82      0.88       284
+              1       0.90      0.97      0.93       442
+   
+       accuracy                           0.91       726
+      macro avg       0.92      0.90      0.90       726
+   weighted avg       0.91      0.91      0.91       726
+```
+
 ## Business Dashboard
 Student Dropout Problem Dashboard, dirancang untuk menyediakan insight bagi para pihak institusi mengenai tingkat siswa dropout yang mencapai lebih dari 30%. Dashboard ini terdiri dari pie chart tentang summary data siswa, kemudian barchat faktor-faktor dropout mahasiswa.
 
@@ -99,7 +136,12 @@ Beberapa point penting yang dapat ditarik menjadi kesimpulan:
 4. **Faktor paling berpengaruh adalah kombinasi performa akademik dan kondisi finansial**
    Variabel seperti jumlah mata kuliah lulus, nilai semester, serta status pembayaran menjadi indikator utama dalam menentukan apakah siswa akan dropout atau graduate.
 5. **Model Machine Learning yang dibangun mampu memprediksi status siswa dengan baik**
-   Model yang dibangun best model adalah Random Forest, menunjukkan performa yang cukup akurat, sehingga dapat digunakan sebagai alat untuk memprediksi siswa yang berisiko dropout.
+   Model yang dibangun best model adalah Random Forest, menunjukkan performa yang cukup akurat, sehingga dapat digunakan sebagai alat untuk memprediksi siswa yang berisiko dropout. Dengan hasil evaluasi model sebagai berikut:
+   - Accuracy: 91%
+   - Precission: 92%
+   - Recall: 90%
+   - F1-Score: 90%
+   Model ini memiliki akurasi sebesar 91%, sehingga dapat dikatakan **cukup andal** dalam memprediksi status siswa (dropout & graduate). Model juga memiliki nilai recall berdasarkan macro avg yang tinggi (90%) menunjukkan bahwa model mampu mengidentifikasi sebagian besar siswa yang benar-benar berisiko dropout atau graduate. Tentu hal ini penting dalam konteks bisnis, karena memungkinkan institusi untuk melakukan prediksi lebih awal dan mencegah siswa dropout dari institusi pendidikan. Namun, model masih dapat ditingkatkan lebih lanjut khususnya meningkatkan recall pada kelas dropout, untuk meminimalkan jumlah siswa berisiko yang tidak terdeteksi (false negatif).
    
 ### Rekomendasi Action Items
 Berdasarkan kesimpulan diatas, berikut adalah beberapa rekomendasi item yang dapat diterapkan oleh Jaya Jaya institusi untuk menurunkan tingkat dropout dan meningkatkan keberhasilan akademik siswa:
