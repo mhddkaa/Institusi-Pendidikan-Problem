@@ -34,7 +34,7 @@ Sumber data:
 Setup environment:
 1. Clone this Repository
    ```bash
-   git clone
+   git clone https://github.com/mhddkaa/Institusi-Pendidikan-Problem.git
    ```
 
 2. Install All the Requirements Inside "requirements.txt"
