@@ -7,7 +7,7 @@ Jumlah *dropout* yang tinggi ini tentu berdampak pada penurunan reputasi dan akr
 
 ### Permasalahan Bisnis
 Berdasarkan kebutuhan pengguna (pihak institusi), terdapat beberapa pertanyaan bisnis yang ingin dijawab melalui analisis data sebagai berikut:
-1. Apakah performa akademik siswa di semester awal memengaruhi kemungkinan dropout?
+1. Apakah performa akademik siswa memengaruhi kemungkinan dropout?
 2. Apakah faktor finansial seperti status pembayaran dan beasiswa berpengaruh terhadap dropout?
 3. Apakah faktor demografi seperti gender dan latar belakang memengaruhi keberhasilan studi?
 4. Faktor apa yang paling berpengaruh dalam menentukan siswa akan dropout atau graduate?
