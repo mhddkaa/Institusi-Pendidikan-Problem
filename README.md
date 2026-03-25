@@ -28,12 +28,19 @@ Berdasarkan cakupan proyek tersebut, dibutuhkan beberapa resource dan tool, yait
 
 ### Persiapan
 
-Sumber data: ....
+Sumber data:
+- [Students' Performance Data](https://github.com/dicodingacademy/dicoding_dataset/blob/bce7a57a496d083716138922bc5839b5c30fa4ea/students_performance/data.csv)
 
 Setup environment:
-```
+1. Clone this Repository
+   ```bash
+   git clone
+   ```
 
-```
+2. Install All the Requirements Inside "requirements.txt"
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Business Dashboard
 Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
@@ -41,9 +48,15 @@ Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga l
 ## Menjalankan Sistem Machine Learning
 Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
 
+Untuk dapat membantu institusi dalam memprediksi kemungkinan jika siswanya akan dropout dan mencegah hal tersebut lebih dini, dapat menggunakan sistem prediksi yang telah dibangun. Sistem dibangun menggunakan Streamlit dan untuk menjalankan sistem tersebut secara local, dapat menjalankan kode berikut pada Terminal,
+
+```bash
+streamlit run streamlit_app.py
 ```
 
-```
+Dan untuk menghentikan program aplikasi Streamlit dapat melalui `ctrl + c`.
+
+Sistem prediksi tersebut juga dapat diakses secara langsung yang sudah di-deploy ke Streamlit Cloud melalui tautan [berikut ini]
 
 ## Conclusion
 Jelaskan konklusi dari proyek yang dikerjakan.
