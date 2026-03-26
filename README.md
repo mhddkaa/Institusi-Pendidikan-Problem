@@ -3,7 +3,7 @@
 ## Business Understanding
 Jaya Jaya Institut adalah salah satu institusi pendidikan tinggi yang telah berdiri sejak tahun 2000 dan memiliki reputasi yang baik dalam menghasilkan lulusan berkualitas. Namun, institusi menghadapi tantangan serius berupa tingginya angka siswa yang tidak menyelesaikan pendidikan (*dropout*). 
 
-Jumlah *dropout* yang tinggi ini tentu berdampak pada penurunan reputasi dan akreditasi institusi, menurunnya kepercayaan masyarakat, hingga inefisiensi dalam pengelolaan sumber daya pendidikan. Untuk itu, institusi berupaya mendeteksi siswa yang berpotensi mengalami *dropout* lebih awal, sehingga dapat diberikan bimbingan khusus kepada siswa. 
+Tingginya angka dropout siswa mencapai lebih dari 30%, tentu dapat berdampak pada penurunan reputasi dan akreditasi institusi, menurunnya kepercayaan masyarakat, hingga inefisiensi dalam pengelolaan sumber daya pendidikan. Permasalahan utama yang dihadapi institusi adalah belum memiliki sistem untuk mendeteksi secara dini siswa yang berisiko dropout. 
 
 ### Permasalahan Bisnis
 Berdasarkan kebutuhan pengguna (pihak institusi), terdapat beberapa pertanyaan bisnis yang ingin dijawab melalui analisis data sebagai berikut:
@@ -14,7 +14,10 @@ Berdasarkan kebutuhan pengguna (pihak institusi), terdapat beberapa pertanyaan b
 5. Seberapa akurat model Machine Learning dalam memprediksi status siswa? 
 
 ### Cakupan Proyek
-Untuk menjawab permasalahan tersebut, akan dilakukan analisis data dan pengembangan model prediksi menggunakan metode Machine Learning. Proyek ini akan mencakup beberapa pendekatan utama, seperti Exploratory Data Analysis (EDA) untuk memperoleh gambaran terkait dataset yang akan digunakan, pembuatan dashboard, serta pembangunan model klasifikasi untuk memprediksi status siswa. 
+Untuk menjawab permasalahan tersebut, akan dilakukan analisis data dan pengembangan model prediksi menggunakan metode Machine Learning. Proyek ini akan mencakup beberapa pendekatan utama, seperti 
+- Exploratory Data Analysis (EDA), untuk memperoleh gambaran terkait dataset yang akan digunakan, serta mengidentifikasi faktor-faktor yang memengaruhi dropout. Insight ini akan membantu institusi mengetahui penyebab utama permasalahan.
+- Pembangunan model klasifikasi, untuk membangun sistem prediksi yang mampu mengklasifikasikan siswa ke dalam kategori dropout atau graduate. Model ini akan berperan sebagai salah satu action items (early warning sistem), sehingga institusi dapat memprediksi siswa berisiko. 
+- Pembuatan dashboard, ini akan berkontribusi sebagai insight interaktif agar pihak institusi dapat memahami kondisi siswa dan mengambil keputusan. Dengan dashboard ini, stakeholder bisa lebih mudah memonitor kondisi siswa, serta memahami faktor risiko.
 
 Pendekatan Machine Learning yang akan digunakan disesuaikan dengan karakteristik dataset, dengan melakukan perbandingan beberapa algoritma untuk mendapatkan performa terbaik.
 
@@ -41,43 +44,6 @@ Setup environment:
    ```bash
    pip install -r requirements.txt
    ```
-
-### Modeling
-Beberapa model machine learning yang digunakan dalam proyek ini untuk memprediksi status siswa (Dropout & Graduate) sebagai berikut:
-- **Logistic Regression**: digunakan sebagai base line model untuk melihat hubungan linear antara variabel terhadap kemungkinan dropout.
-- **SVM**: digunakan untuk memaksimalkan margin antara kelas dalam dataset yang berdimensi tinggi.
-- **Decision Tree Classifier**: digunakan untuk menangkap hubungan non-linear antar variabel.
-- **Random Forest Classifier**: untuk meningkatkan akurasi dan mengurangi overfitting dengan metode ensemble.
-  
-Berdasarkan hasil evaluasi, model Random Forest memberikan performa yang paling baik diantara keempat model lainnya. Model ini yang akan digunakan untuk memprediksi kedepannya.
-
-### Evaluation
-Matrix evaluation yang digunakan dalam proyek ini sebagai berikut:
-- **Accuracy**: mengukur tingkat ketepatan prediksi model secara keseluruhan.
-- **Precision & Recall**: mengukur seberapa banyak memprediksi positif yang benar dan positif yang salah.
-- **F1-Score**: keseimbangan antara presisi dan recall.
-- **Confusion Matrix**: untuk melihat distribusi prediksi benar dan salah.
-
-Berikut hasil evaluasi yang didapat pada model machine learning
-| Model               | Accuracy  | Precision | Recall    | F1-Score  |
-| ------------------- | --------- | --------- | --------- | --------- |
-| Logistic Regression | 0.913     | 0.918     | 0.941     | 0.929     |
-| SVM                 | 0.905     | 0.899     | 0.950     | 0.924     |
-| Decision Tree       | 0.854     | 0.878     | 0.882     | 0.880     |
-| **Random Forest**   | **0.910** | **0.888** | **0.975** | **0.929** |
-
-Berikut classification report untuk model Random Forest (Hyperparameter Tuning)
-
-```bash
-                 precision    recall  f1-score   support
-   
-              0       0.94      0.82      0.88       284
-              1       0.90      0.97      0.93       442
-   
-       accuracy                           0.91       726
-      macro avg       0.92      0.90      0.90       726
-   weighted avg       0.91      0.91      0.91       726
-```
 
 ## Business Dashboard
 Student Dropout Problem Dashboard, dirancang untuk menyediakan insight bagi para pihak institusi mengenai tingkat siswa dropout yang mencapai lebih dari 30%. Dashboard ini terdiri dari pie chart tentang summary data siswa, kemudian barchat faktor-faktor dropout mahasiswa.
@@ -112,6 +78,43 @@ Student Dropout Problem Dashboard, dirancang untuk menyediakan insight bagi para
        Username: mahdaalikap@gmail.com
        Password: root123 
    ```
+
+## Modeling
+Beberapa model machine learning yang digunakan dalam proyek ini untuk memprediksi status siswa (Dropout & Graduate) sebagai berikut:
+- **Logistic Regression**: digunakan sebagai base line model untuk melihat hubungan linear antara variabel terhadap kemungkinan dropout.
+- **SVM**: digunakan untuk memaksimalkan margin antara kelas dalam dataset yang berdimensi tinggi.
+- **Decision Tree Classifier**: digunakan untuk menangkap hubungan non-linear antar variabel.
+- **Random Forest Classifier**: untuk meningkatkan akurasi dan mengurangi overfitting dengan metode ensemble.
+  
+Berdasarkan hasil evaluasi, model Random Forest memberikan performa yang paling baik diantara keempat model lainnya. Model ini yang akan digunakan untuk memprediksi kedepannya.
+
+## Evaluation
+Matrix evaluation yang digunakan dalam proyek ini sebagai berikut:
+- **Accuracy**: mengukur tingkat ketepatan prediksi model secara keseluruhan.
+- **Precision & Recall**: mengukur seberapa banyak memprediksi positif yang benar dan positif yang salah.
+- **F1-Score**: keseimbangan antara presisi dan recall.
+- **Confusion Matrix**: untuk melihat distribusi prediksi benar dan salah.
+
+Berikut hasil evaluasi yang didapat pada model machine learning
+| Model               | Accuracy  | Precision | Recall    | F1-Score  |
+| ------------------- | --------- | --------- | --------- | --------- |
+| Logistic Regression | 0.913     | 0.918     | 0.941     | 0.929     |
+| SVM                 | 0.905     | 0.899     | 0.950     | 0.924     |
+| Decision Tree       | 0.854     | 0.878     | 0.882     | 0.880     |
+| **Random Forest**   | **0.910** | **0.888** | **0.975** | **0.929** |
+
+Berikut classification report untuk model Random Forest (Hyperparameter Tuning)
+
+```bash
+                 precision    recall  f1-score   support
+   
+              0       0.94      0.82      0.88       284
+              1       0.90      0.97      0.93       442
+   
+       accuracy                           0.91       726
+      macro avg       0.92      0.90      0.90       726
+   weighted avg       0.91      0.91      0.91       726
+```
 
 ## Menjalankan Sistem Machine Learning
 Untuk membantu Jaya Jaya institusi dalam memprediksi kemungkinan siswanya dropout dan mencegah hal tersebut lebih dini, dapat menggunakan sistem aplikasi prediksi yang telah dibangun ini. Sistem ini menggunakan Streamlit dan untuk menjalankannya dapat secara local, dengan run code berikut pada Terminal,
